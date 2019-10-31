@@ -34,10 +34,10 @@ var addSql='insert ignore into taiwan38leLottery(link,firstnum,secondnum,thirdnu
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum,sixthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[taiwan38leLottery insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('taiwan38leLottery insert id:',resul);
 });
 });connection.end();};};
 exports.taiwan38leLottery=taiwan38leLottery;

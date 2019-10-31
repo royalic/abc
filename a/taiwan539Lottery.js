@@ -33,10 +33,10 @@ var addSql='insert ignore into taiwan539Lottery(link,firstnum,secondnum,thirdnum
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[taiwan539Lottery insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('taiwan539Lottery insert id:',resul);
 });
 });connection.end();};
 };

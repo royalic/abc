@@ -31,10 +31,10 @@ var addSql='insert ignore into fucai3D(link,firstnum,secondnum,thirdnum) values 
 var addSqlParams=[link,firstnum,secondnum,thirdnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[fucai3D insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('fucai3D insert id:',resul);
 });
 });connection.end();};};
 exports.fucai3D=fucai3D;

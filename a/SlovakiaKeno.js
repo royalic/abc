@@ -58,10 +58,10 @@ var addSql='insert ignore into SlovakiaKeno(link,number1,number2,number3,number4
 var addSqlParams=[link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[SlovakiaKeno insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('SlovakiaKeno insert id:',resul);
 });
 });connection.end();};});};
 exports.SlovakiaKeno=SlovakiaKeno;

@@ -32,10 +32,10 @@ var addSql='insert ignore into taiwan4xingcaiLottery(link,kilobit,hundredsbit,te
 var addSqlParams=[link,kilobit,hundredsbit,tens,bit];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[taiwan4xingcaiLottery insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('taiwan4xingcaiLottery insert id:',resul);
 });
 });connection.end();};};
 exports.taiwan4xingcaiLottery=taiwan4xingcaiLottery;

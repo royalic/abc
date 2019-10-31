@@ -33,10 +33,10 @@ var addSql='insert ignore into shanghaiHour(link,firstnum,secondnum,thirdnum,for
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[shanghaiHour insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('shanghaiHour insert id:',resul);
 });
 });connection.end();};};
 exports.shanghaiHour=shanghaiHour;

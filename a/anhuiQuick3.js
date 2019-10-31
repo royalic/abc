@@ -31,10 +31,10 @@ var addSql='insert ignore into anhuiQuick3(link,firstnum,secondnum,thirdnum) val
 var addSqlParams=[link,firstnum,secondnum,thirdnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[anhuiQuick3 insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('anhuiQuick3 insert id:',resul);
 });
 });connection.end();};};
 exports.anhuiQuick3=anhuiQuick3;

@@ -36,10 +36,10 @@ var addSql='insert ignore into chongqingHappy(link,firstnum,secondnum,thirdnum,f
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum,sixthnum,seventhnum,eighthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[chongqingHappy insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('chongqingHappy insert id:',resul);
 });
 });connection.end();};};
 exports.chongqingHappy=chongqingHappy;

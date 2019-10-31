@@ -31,10 +31,10 @@ var addSql='insert ignore into jiangsuQuick3(link,firstnum,secondnum,thirdnum) v
 var addSqlParams=[link,firstnum,secondnum,thirdnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[jiangsuQuick3 insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('jiangsuQuick3 insert id:',resul);
 });
 });connection.end();};};
 exports.jiangsuQuick3=jiangsuQuick3;

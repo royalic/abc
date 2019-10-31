@@ -41,10 +41,10 @@ var addSql='insert ignore into HongKonglottery(link,firstnum,secondnum,thirdnum,
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum,sixthnum,supernum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[HongKonglottery insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('HongKonglottery insert id:',resul);
 });
 connection.end();};
 });};

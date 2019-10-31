@@ -36,10 +36,10 @@ var addSql='insert ignore into hunanHappy(link,firstnum,secondnum,thirdnum,forth
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum,sixthnum,seventhnum,eighthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[hunanHappy insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('hunanHappy insert id:',resul);
 });
 });connection.end();};
 };

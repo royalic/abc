@@ -14,9 +14,9 @@ database:'lottery'});
 connection.connect();
 connection.query('insert ignore into HongKongRace select link,firstnum,secondnum,thirdnum from HongKongHorseRace where firstnum>0',function(err,result){
   if(err){
-    console.log('[insert error]-',err.message);
+    console.log('[HongKongRace insert error]-',err.message);
     return;
   }
-  console.log('insert id:',result);
+  console.log('HongKongRace insert id:',result);
 });connection.end();});};
 exports.HongKongRace=HongKongRace;

@@ -31,10 +31,10 @@ var addSql='insert ignore into shanghaiQuick3(link,firstnum,secondnum,thirdnum) 
 var addSqlParams=[link,firstnum,secondnum,thirdnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[shanghaiQuick3 insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('shanghaiQuick3 insert id:',resul);
 });
 });connection.end();};
 };

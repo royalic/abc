@@ -33,10 +33,10 @@ var addSql='insert ignore into anhui115(link,firstnum,secondnum,thirdnum,forthnu
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[anhui115 insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('anhui115 insert id:',resul);
 });
 });connection.end();};
 };

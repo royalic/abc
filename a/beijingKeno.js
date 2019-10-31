@@ -48,10 +48,10 @@ var addSql='insert ignore into beijingKeno(link,num,numberb,numberc,numberd,numb
 var addSqlParams=[link,numberv,numbers,numberd,numberf,numberg,numberh,numberj,numberk,numberl,numberq,numberw,numbere,numberr,numbert,numbery,numberu,numberi,numbero,numberp,numberz];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[beijingKeno insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('beijingKeno insert id:',resul);
 });
 });connection.end();};}
 exports.beijingKeno=beijingKeno;

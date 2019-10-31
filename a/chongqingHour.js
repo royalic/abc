@@ -33,10 +33,10 @@ var addSql='insert ignore into chongqingHour(link,firstnum,secondnum,thirdnum,fo
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[chongqingHour insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('chongqingHour insert id:',resul);
 });
 });connection.end();};};
 exports.chongqingHour=chongqingHour;

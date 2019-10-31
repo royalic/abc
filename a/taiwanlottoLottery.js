@@ -35,10 +35,10 @@ var addSql='insert ignore into taiwanlottoLottery(link,firstnum,secondnum,thirdn
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum,sixthnum,supernum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[taiwanlottoLottery insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('taiwanlottoLottery insert id:',resul);
 });
 });connection.end();};};
 exports.taiwanlottoLottery=taiwanlottoLottery;

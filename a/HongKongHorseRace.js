@@ -43,10 +43,10 @@ var addSql='insert ignore into HongKongHorseRace(link,firstnum,secondnum,thirdnu
 var addSqlParams=[link,firstnum,secondnum,thirdnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[HongKongHorseRace insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('HongKongHorseRace insert id:',resul);
 });
 });connection.end();};});};
 exports.HongKongHorseRace=HongKongHorseRace;

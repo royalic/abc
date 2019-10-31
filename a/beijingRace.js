@@ -38,10 +38,10 @@ var addSql='insert ignore into beijingRace(link,firstnum,secondnum,thirdnum,fort
 var addSqlParams=[link,firstnum,secondnum,thirdnum,forthnum,fifthnum,sixthnum,seventhnum,eighthnum,ninthnum,tenthnum];
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
-  console.log('[insert error]-',err.message);
+  console.log('[beijingRace insert error]-',err.message);
   return;
 }
-console.log('insert id:',resul);
+console.log('beijingRace insert id:',resul);
 });
 });connection.end();};
 };

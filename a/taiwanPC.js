@@ -1,5 +1,11 @@
 var mysql=require('mysql');
-function taiwanPC(){var connection=mysql.createConnection({
+var schedule=require('node-schedule');
+function taiwanPC(){
+var rule2=new schedule.RecurrenceRule();
+rule2.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
+rule2.second=[1,5,10,15,20];
+var k=schedule.scheduleJob(rule2,function(){
+var connection=mysql.createConnection({
 host:'localhost',
 user:'root',
 password:'123456',
@@ -13,5 +19,6 @@ connection.query('insert ignore into taiwanPC select link,mod(number1+number2+nu
   }
   console.log('taiwanPC insert id:',result);
 });connection.end();
+});
 };
 exports.taiwanPC=taiwanPC;

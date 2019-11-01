@@ -1,5 +1,11 @@
 var mysql=require('mysql');
-function beijingPC(){var connection=mysql.createConnection({
+var schedule=require('node-schedule');
+function beijingPC(){
+var rule2=new schedule.RecurrenceRule();
+rule2.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
+rule2.second=[1,5,10,15,20];
+var k=schedule.scheduleJob(rule2,function(){
+var connection=mysql.createConnection({
 host:'localhost',
 user:'root',
 password:'123456',
@@ -12,5 +18,6 @@ connection.query('insert ignore into beijingPC select link,mod(num+numberb+numbe
     return;
   }
   console.log('beijingPC insert id:',result);
-});connection.end();};
+});connection.end();
+});};
 exports.beijingPC=beijingPC;

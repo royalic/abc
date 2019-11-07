@@ -34,7 +34,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[beijingQuick3 insert error]-',err.message);
   return;
 }
-console.log('beijingQuick3 insert id:',resul);
+console.log('beijingQuick3 insert OK');
 });
 });connection.end();};
 };

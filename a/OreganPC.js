@@ -11,6 +11,6 @@ connection.query('insert ignore into OreganPC select link,mod(number1+number2+nu
     console.log('[OreganPC insert error]-',err.message);
     return;
   }
-  console.log('OreganPC insert id:',result);
+  console.log('OreganPC insert OK');
 });
 connection.end();

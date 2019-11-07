@@ -11,6 +11,6 @@ connection.query('insert ignore into VietnamMin select link,mod(number1+number2+
     console.log('[insert error]-',err.message);
     return;
   }
-  console.log('insert id:',result);
+  console.log('insert OK');
 });
 connection.end();

@@ -36,7 +36,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[jiangxi115 insert error]-',err.message);
   return;
 }
-console.log('jiangxi115 insert id:',resul);
+console.log('jiangxi115 insert OK');
 });
 });connection.end();};
 };

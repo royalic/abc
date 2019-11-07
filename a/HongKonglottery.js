@@ -44,7 +44,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[HongKonglottery insert error]-',err.message);
   return;
 }
-console.log('HongKonglottery insert id:',resul);
+console.log('HongKonglottery insert OK');
 });
 connection.end();};
 });};

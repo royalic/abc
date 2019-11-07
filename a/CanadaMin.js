@@ -11,6 +11,6 @@ connection.query('insert ignore into CanadaMin select link,mod(number1+number2+n
     console.log('[CanadaMin insert error]-',err.message);
     return;
   }
-  console.log('CanadaMin insert id:',result);
+  console.log('CanadaMin insert OK');
 });
 connection.end();

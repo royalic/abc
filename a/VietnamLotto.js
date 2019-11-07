@@ -1,0 +1,18 @@
+var VietnamLottoAJ=require('./VietnamLottoAJ.js');
+var VietnamLottoPY=require('./VietnamLottoPY.js');
+var VietnamLottoXN=require('./VietnamLottoXN.js');
+var VietnamLottoHZMS=require('./VietnamLottoHZMS.js');
+var VietnamLottoSH=require('./VietnamLottoSH.js');
+var VietnamLottoBL=require('./VietnamLottoBL.js');
+var VietnamLottoTN=require('./VietnamLottoTN.js');
+var VietnamLottoSZ=require('./VietnamLottoSZ.js');
+var VietnamLottoQC=require('./VietnamLottoQC.js');
+VietnamLottoAJ.VietnamLottoAJ();
+VietnamLottoPY.VietnamLottoPY();
+VietnamLottoXN.VietnamLottoXN();
+VietnamLottoHZMS.VietnamLottoHZMS();
+VietnamLottoSH.VietnamLottoSH();
+VietnamLottoBL.VietnamLottoBL();
+VietnamLottoTN.VietnamLottoTN();
+VietnamLottoSZ.VietnamLottoSZ();
+VietnamLottoQC.VietnamLottoQC();

@@ -11,6 +11,6 @@ connection.query('insert ignore into MaltaPC select link,mod(number1+number2+num
     console.log('[MaltaPC insert error]-',err.message);
     return;
   }
-  console.log('MaltaPC insert id:',result);
+  console.log('MaltaPC insert OK');
 });
 connection.end();

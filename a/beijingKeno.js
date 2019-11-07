@@ -51,7 +51,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[beijingKeno insert error]-',err.message);
   return;
 }
-console.log('beijingKeno insert id:',resul);
+console.log('beijingKeno insert OK');
 });
 });connection.end();};}
 exports.beijingKeno=beijingKeno;

@@ -36,7 +36,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[chongqingHour insert error]-',err.message);
   return;
 }
-console.log('chongqingHour insert id:',resul);
+console.log('chongqingHour insert OK');
 });
 });connection.end();};};
 exports.chongqingHour=chongqingHour;

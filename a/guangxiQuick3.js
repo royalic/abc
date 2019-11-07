@@ -34,7 +34,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[guangxiQuick3 insert error]-',err.message);
   return;
 }
-console.log('guangxiQuick3 insert id:',resul);
+console.log('guangxiQuick3 insert OK');
 });
 });connection.end();};
 };

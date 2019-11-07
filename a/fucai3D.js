@@ -34,7 +34,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[fucai3D insert error]-',err.message);
   return;
 }
-console.log('fucai3D insert id:',resul);
+console.log('fucai3D insert OK');
 });
 });connection.end();};};
 exports.fucai3D=fucai3D;

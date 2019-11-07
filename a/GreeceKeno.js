@@ -61,7 +61,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[GreeceKeno insert error]-',err.message);
   return;
 }
-console.log('GreeceKeno insert id:',resul);
+console.log('GreeceKeno insert OK');
 });
     };connection.end();
 });});};

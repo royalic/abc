@@ -34,7 +34,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[shanghaiQuick3 insert error]-',err.message);
   return;
 }
-console.log('shanghaiQuick3 insert id:',resul);
+console.log('shanghaiQuick3 insert OK');
 });
 });connection.end();};
 };

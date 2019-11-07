@@ -36,7 +36,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[shanghaiHour insert error]-',err.message);
   return;
 }
-console.log('shanghaiHour insert id:',resul);
+console.log('shanghaiHour insert OK');
 });
 });connection.end();};};
 exports.shanghaiHour=shanghaiHour;

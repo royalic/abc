@@ -35,7 +35,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[taiwan4xingcaiLottery insert error]-',err.message);
   return;
 }
-console.log('taiwan4xingcaiLottery insert id:',resul);
+console.log('taiwan4xingcaiLottery insert OK');
 });
 });connection.end();};};
 exports.taiwan4xingcaiLottery=taiwan4xingcaiLottery;

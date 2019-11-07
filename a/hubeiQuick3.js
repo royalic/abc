@@ -34,7 +34,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[hubeiQuick3 insert error]-',err.message);
   return;
 }
-console.log('hubeiQuick3 insert id:',resul);
+console.log('hubeiQuick3 insert OK');
 });
 });connection.end();};};
 exports.hubeiQuick3=hubeiQuick3;

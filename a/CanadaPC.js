@@ -11,6 +11,6 @@ connection.query('insert ignore into CanadaPC select link,mod(number1+number2+nu
     console.log('[CanadaPC insert error]-',err.message);
     return;
   }
-  console.log('CanadaPC insert id:',result);
+  console.log('CanadaPC insert OK');
 });
 connection.end();

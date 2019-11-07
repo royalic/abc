@@ -17,6 +17,6 @@ connection.query('insert ignore into SlovakiaPC select link,mod(number1+number2+
     console.log('[SlovakiaPC insert error]-',err.message);
     return;
   }
-  console.log('SlovakiaPC insert id:',result);
+  console.log('SlovakiaPC insert OK');
 });connection.end();});};
 exports.SlovakiaPC=SlovakiaPC;

@@ -17,6 +17,6 @@ connection.query('insert ignore into SlovakiaMin select link,mod(number1+number2
     console.log('[SlovakiaMin insert error]-',err.message);
     return;
   }
-  console.log('SlovakiaMin insert id:',result);
+  console.log('SlovakiaMin insert OK');
 });connection.end();});};
 exports.SlovakiaMin=SlovakiaMin;

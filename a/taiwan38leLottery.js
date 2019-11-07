@@ -37,7 +37,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[taiwan38leLottery insert error]-',err.message);
   return;
 }
-console.log('taiwan38leLottery insert id:',resul);
+console.log('taiwan38leLottery insert OK');
 });
 });connection.end();};};
 exports.taiwan38leLottery=taiwan38leLottery;

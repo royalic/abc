@@ -16,7 +16,7 @@ connection.query('insert ignore into KentuckyPC select link,mod(number1+number2+
     console.log('[KentuckyPC insert error]-',err.message);
     return;
   }
-  console.log('KentuckyPC insert id:',result);
+  console.log('KentuckyPC insert OK');
 });
 connection.end();
 });};

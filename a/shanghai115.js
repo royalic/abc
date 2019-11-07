@@ -36,7 +36,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[shanghai115 insert error]-',err.message);
   return;
 }
-console.log('shanghai115 insert id:',resul);
+console.log('shanghai115 insert OK');
 });
 });connection.end();};
 };

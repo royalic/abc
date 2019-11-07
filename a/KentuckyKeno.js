@@ -55,7 +55,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[KentuckyKeno insert error]-',err.message);
   return;
 }
-console.log('KentuckyKeno insert id:',resul);
+console.log('KentuckyKeno insert OK');
 });
     };connection.end();
 });

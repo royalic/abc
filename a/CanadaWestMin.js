@@ -11,6 +11,6 @@ connection.query('insert ignore into CanadaWestMin select link,mod(number1+numbe
     console.log('[CanadaWestMin insert error]-',err.message);
     return;
   }
-  console.log('CanadaWestMin insert id:',result);
+  console.log('CanadaWestMin insert OK');
 });
 connection.end();

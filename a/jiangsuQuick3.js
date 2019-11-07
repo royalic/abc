@@ -34,7 +34,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[jiangsuQuick3 insert error]-',err.message);
   return;
 }
-console.log('jiangsuQuick3 insert id:',resul);
+console.log('jiangsuQuick3 insert OK');
 });
 });connection.end();};};
 exports.jiangsuQuick3=jiangsuQuick3;

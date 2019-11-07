@@ -36,7 +36,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[xinjiangHour insert error]-',err.message);
   return;
 }
-console.log('xinjiangHour insert id:',resul);
+console.log('xinjiangHour insert ok');
 });
 });connection.end();};};
 exports.xinjiangHour=xinjiangHour;

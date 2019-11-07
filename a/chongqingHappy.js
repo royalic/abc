@@ -39,7 +39,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[chongqingHappy insert error]-',err.message);
   return;
 }
-console.log('chongqingHappy insert id:',resul);
+console.log('chongqingHappy insert OK');
 });
 });connection.end();};};
 exports.chongqingHappy=chongqingHappy;

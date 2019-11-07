@@ -51,7 +51,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[taiwanKeno insert error]-',err.message);
   return;
 }
-console.log('taiwanKeno insert id:',resul);
+console.log('taiwanKeno insert OK');
 });
 });connection.end();};
 };

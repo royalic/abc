@@ -17,6 +17,6 @@ connection.query('insert ignore into HongKongRace select link,firstnum,secondnum
     console.log('[HongKongRace insert error]-',err.message);
     return;
   }
-  console.log('HongKongRace insert id:',result);
+  console.log('HongKongRace insert OK');
 });connection.end();});};
 exports.HongKongRace=HongKongRace;

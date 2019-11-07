@@ -16,7 +16,7 @@ connection.query('insert ignore into KentuckyMin select link,mod(number1+number2
     console.log('[KentuckyMin insert error]-',err.message);
     return;
   }
-  console.log('KentuckyMin insert id:',result);
+  console.log('KentuckyMin insert OK');
 });
 connection.end();
 });};

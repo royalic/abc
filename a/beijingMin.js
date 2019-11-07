@@ -17,7 +17,7 @@ connection.query('insert ignore into beijingMin select link,mod(num+numberb+numb
     console.log('[beijingMin insert error]-',err.message);
     return;
   }
-  console.log('beijingMin insert id:',result);
+  console.log('beijingMin insert OK');
 });connection.end();
 });};
 exports.beijingMin=beijingMin;

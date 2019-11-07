@@ -61,7 +61,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[SlovakiaKeno insert error]-',err.message);
   return;
 }
-console.log('SlovakiaKeno insert id:',resul);
+console.log('SlovakiaKeno insert OK');
 });
 });connection.end();};});};
 exports.SlovakiaKeno=SlovakiaKeno;

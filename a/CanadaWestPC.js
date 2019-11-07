@@ -11,6 +11,6 @@ connection.query('insert ignore into CanadaWestPC select link,mod(number1+number
     console.log('[CanadaWestPC insert error]-',err.message);
     return;
   }
-  console.log('CanadaWestPC insert id:',result);
+  console.log('CanadaWestPC insert OK');
 });
 connection.end();

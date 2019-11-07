@@ -17,6 +17,6 @@ connection.query('insert ignore into taiwanMin select link,mod(number1+number2+n
     console.log('[taiwanMin insert error]-',err.message);
     return;
   }
-  console.log('taiwanMin insert id:',result);
+  console.log('taiwanMin insert OK');
 });connection.end();});};
 exports.taiwanMin=taiwanMin;

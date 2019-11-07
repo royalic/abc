@@ -11,6 +11,6 @@ connection.query('insert ignore into OreganMin select link,mod(number1+number2+n
     console.log('[OreganMin insert error]-',err.message);
     return;
   }
-  console.log('OreganMin insert id:',result);
+  console.log('OreganMin insert OK');
 });
 connection.end();

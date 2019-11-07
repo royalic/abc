@@ -11,6 +11,6 @@ connection.query('insert ignore into MaltaMin select link,mod(number1+number2+nu
     console.log('[MaltaMin insert error]-',err.message);
     return;
   }
-  console.log('MaltaMin insert id:',result);
+  console.log('MaltaMin insert OK');
 });
 connection.end();

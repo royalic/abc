@@ -39,7 +39,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[hunanHappy insert error]-',err.message);
   return;
 }
-console.log('hunanHappy insert id:',resul);
+console.log('hunanHappy insert OK');
 });
 });connection.end();};
 };

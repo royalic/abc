@@ -89,3 +89,6 @@ GreecePC.GreecePC();
 KentuckyKeno.KentuckyKeno();
 KentuckyMin.KentuckyMin();
 KentuckyPC.KentuckyPC();
+process.on('uncaughtException',function(err){
+  console.log(err);
+  console.log(err.stack);});

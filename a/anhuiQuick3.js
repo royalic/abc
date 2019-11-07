@@ -34,7 +34,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[anhuiQuick3 insert error]-',err.message);
   return;
 }
-console.log('anhuiQuick3 insert id:',resul);
+console.log('anhuiQuick3 insert OK');
 });
 });connection.end();};};
 exports.anhuiQuick3=anhuiQuick3;

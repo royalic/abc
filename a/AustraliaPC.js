@@ -11,6 +11,6 @@ connection.query('insert ignore into AustraliaPC select link,mod(number1+number2
     console.log('[AustraliaPC insert error]-',err.message);
     return;
   }
-  console.log('AustraliaPC insert id:',result);
+  console.log('AustraliaPC insert OK');
 });
 connection.end();

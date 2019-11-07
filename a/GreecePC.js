@@ -17,7 +17,7 @@ connection.query('insert ignore into GreecePC select link,mod(number1+number2+nu
     console.log('[GreecePC insert error]-',err.message);
     return;
   }
-  console.log('GreecePC insert id:',result);
+  console.log('GreecePC insert OK');
 });
 connection.end();});};
 exports.GreecePC=GreecePC;

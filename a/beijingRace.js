@@ -41,7 +41,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[beijingRace insert error]-',err.message);
   return;
 }
-console.log('beijingRace insert id:',resul);
+console.log('beijingRace insert OK');
 });
 });connection.end();};
 };

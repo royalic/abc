@@ -17,7 +17,7 @@ connection.query('insert ignore into beijingPC select link,mod(num+numberb+numbe
     console.log('[beijingPC insert error]-',err.message);
     return;
   }
-  console.log('beijingPC insert id:',result);
+  console.log('beijingPC insert OK');
 });connection.end();
 });};
 exports.beijingPC=beijingPC;

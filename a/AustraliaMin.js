@@ -11,7 +11,7 @@ connection.query('insert ignore into AustraliaMin select link,mod(number1+number
     console.log('[AustraliaMin insert error]-',err.message);
     return;
   }
-  console.log('AustraliaMin insert id:',result);
+  console.log('AustraliaMin insert OK');
 });
 connection.end();
 

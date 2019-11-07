@@ -36,7 +36,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[shandong115 insert error]-',err.message);
   return;
 }
-console.log('shandong115 insert id:',resul);
+console.log('shandong115 insert OK');
 });
 });connection.end();};};
 exports.shandong115=shandong115;

@@ -11,7 +11,7 @@ connection.query('insert ignore into MichiganMin select link,mod(number1+number2
     console.log('[MichiganMin insert error]-',err.message);
     return;
   }
-  console.log('MichiganMin insert id:',result);
+  console.log('MichiganMin insert OK');
 });
 connection.end();
 

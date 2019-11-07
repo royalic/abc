@@ -11,6 +11,6 @@ connection.query('insert ignore into MichiganPC select link,mod(number1+number2+
     console.log('[MichiganPC insert error]-',err.message);
     return;
   }
-  console.log('MichiganPC insert id:',result);
+  console.log('MichiganPC insert OK');
 });
 connection.end();

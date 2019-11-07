@@ -46,7 +46,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[HongKongHorseRace insert error]-',err.message);
   return;
 }
-console.log('HongKongHorseRace insert id:',resul);
+console.log('HongKongHorseRace insert OK');
 });
 });connection.end();};});};
 exports.HongKongHorseRace=HongKongHorseRace;

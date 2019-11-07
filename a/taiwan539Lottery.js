@@ -36,7 +36,7 @@ connection.query(addSql,addSqlParams,function(err,resul){
   console.log('[taiwan539Lottery insert error]-',err.message);
   return;
 }
-console.log('taiwan539Lottery insert id:',resul);
+console.log('taiwan539Lottery insert OK');
 });
 });connection.end();};
 };

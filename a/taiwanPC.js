@@ -17,7 +17,7 @@ connection.query('insert ignore into taiwanPC select link,mod(number1+number2+nu
     console.log('[taiwanPC insert error]-',err.message);
     return;
   }
-  console.log('taiwanPC insert id:',result);
+  console.log('taiwanPC insert OK');
 });connection.end();
 });
 };

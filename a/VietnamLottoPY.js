@@ -4,7 +4,7 @@ var http = require('https');
 var mysql=require('mysql');
 function VietnamLottoPY(){
 var rule=new schedule.RecurrenceRule();
-rule.dayOfweek=[5];
+rule.dayOfWeek=[5];
 rule.hour=[17];
 rule.minute=[30];
 var a=schedule.scheduleJob(rule,function(){

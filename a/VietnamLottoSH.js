@@ -4,7 +4,7 @@ var mysql=require('mysql');
 var schedule=require('node-schedule');
 function VietnamLottoSH(){
 var rule=new schedule.RecurrenceRule();
-rule.dayOfweek=[1];
+rule.dayOfWeek=[1];
 rule.hour=[18];
 rule.minute=[30];
 var a=schedule.scheduleJob(rule,function(){

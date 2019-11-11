@@ -15,8 +15,6 @@ var connection=mysql.createConnection({
 connection.connect();
 var n=sj.format(new Date(),'YYYY-MM-DD');
 var m='https://api.opap.gr/draws/v3.0/1100/draw-date/'+n+'/'+n+'?limit=10&page=0';
-console.log(m);
-console.log(n);
 request({
   url:    m,
   method: 'GET',
@@ -55,7 +53,6 @@ request({
         var number20=c.list[19];
         var addSql='insert ignore into GreeceKeno(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
 var addSqlParams=[lin,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20];
-console.log(addSqlParams);
 connection.query(addSql,addSqlParams,function(err,resul){
   if(err){
   console.log('[GreeceKeno insert error]-',err.message);

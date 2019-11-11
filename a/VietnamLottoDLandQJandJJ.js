@@ -2,10 +2,10 @@ var cheerio=require('cheerio');
 var http = require('https');
 var mysql=require('mysql');
 var schedule=require('node-schedule');
-function VietnamLottoTTandJODH(){
+function VietnamLottoDLandQJandJJ(){
 var rule=new schedule.RecurrenceRule();
-rule.dayOfWeek=[1];
-rule.hour=[18];
+rule.dayOfWeek=[7];
+rule.hour=[17];
 rule.minute=[30];
 var a=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
@@ -63,25 +63,52 @@ function parseHtml(result){
    var number16b=$('.giai2').eq(2).text();
    var number17b=$('.giai1').eq(2).text();
    var number18b=$('.giaidb').eq(2).text();
+   var number1c=$('.giai8').eq(1).text();
+   var number2c=$('.giai7').eq(1).text();
+   var number3c=$('.giai6').eq(1).text();
+   var number4c=$('.giai6').eq(2).text();
+   var number5c=$('.giai6').eq(3).text();
+   var number6c=$('.giai5').eq(1).text();
+   var number7c=$('.giai4').eq(1).text();
+   var number8c=$('.giai4').eq(2).text();
+   var number9c=$('.giai4').eq(3).text();
+   var number10c=$('.giai4').eq(4).text();
+   var number11c=$('.giai4').eq(5).text();
+   var number12c=$('.giai4').eq(6).text();
+   var number13c=$('.giai4').eq(7).text();
+   var number14c=$('.giai3').eq(1).text();
+   var number15c=$('.giai3').eq(2).text();
+   var number16c=$('.giai2').eq(1).text();
+   var number17c=$('.giai1').eq(1).text();
+   var number18c=$('.giaidb').eq(1).text();
    params=[link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18];
-   var addSql='insert ignore into VietnamLottoJODH(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'; 
+   var addSql='insert ignore into VietnamLottoDL(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'; 
   connection.query(addSql,params,function(err,resul){
       if(err){
-        console.log('[VietnamLottoJODH insert error]-',err.message);
+        console.log('[VietnamLottoDL insert error]-',err.message);
       return;
       }
-    console.log('[VietnamLottoJODH insert OK]');
+    console.log('[VietnamLottoDL insert OK]');
 });
    paramsb=[link,number1b,number2b,number3b,number4b,number5b,number6b,number7b,number8b,number9b,number10b,number11b,number12b,number13b,number14b,number15b,number16b,number17b,number18b];
-   var addSqlb='insert ignore into VietnamLottoTT(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+   var addSqlb='insert ignore into VietnamLottoJJ(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
   connection.query(addSqlb,paramsb,function(err,resul){
       if(err){
-        console.log('[VietnamLottoTT insert error]-',err.message);
+        console.log('[VietnamLottoJJ insert error]-',err.message);
       return;
       }
-    console.log('[VietnamLottoTT insert OK]');
+    console.log('[VietnamLottoJJ insert OK]');
+});
+paramsc=[link,number1c,number2c,number3c,number4c,number5c,number6c,number7c,number8c,number9c,number10c,number11c,number12c,number13c,number14c,number15c,number16c,number17c,number18c];
+   var addSqlc='insert ignore into VietnamLottoQJ(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+  connection.query(addSqlc,paramsc,function(err,resul){
+      if(err){
+        console.log('[VietnamLottoQJ insert error]-',err.message);
+      return;
+      }
+    console.log('[VietnamLottoQJ insert OK]');
 });
 connection.end(); 
 };
 });};
-exports.VietnamLottoTTandJODH=VietnamLottoTTandJODH;
+exports.VietnamLottoDLandQJandJJ=VietnamLottoDLandQJandJJ;

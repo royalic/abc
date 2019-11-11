@@ -2,10 +2,10 @@ var cheerio=require('cheerio');
 var http = require('https');
 var mysql=require('mysql');
 var schedule=require('node-schedule');
-function VietnamLottoTD(){
+function VietnamLottoFA(){
 var rule=new schedule.RecurrenceRule();
-rule.dayOfWeek=[2];
-rule.hour=[17];
+rule.dayOfWeek=[1];
+rule.hour=[18];
 rule.minute=[30];
 var a=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
@@ -15,7 +15,7 @@ var connection=mysql.createConnection({
   port:'3306',
   database:'lottery'});
 connection.connect();
-http.get('https://www.minhngoc.net.vn/xo-so-truc-tiep/mien-nam.html', function(req, res) {
+http.get('https://www.minhngoc.net.vn/xo-so-truc-tiep/mien-trung.html', function(req, res) {
     result = '';
     req.on('data', function(data) {
         result += data;
@@ -27,6 +27,24 @@ http.get('https://www.minhngoc.net.vn/xo-so-truc-tiep/mien-nam.html', function(r
 function parseHtml(result){
    var $=cheerio.load(result);
    var link=$('.ngay').text();
+   var number1=$('.giai8').eq(1).text();
+   var number2=$('.giai7').eq(1).text();
+   var number3=$('.giai6').eq(1).text();
+   var number4=$('.giai6').eq(2).text();
+   var number5=$('.giai6').eq(3).text();
+   var number6=$('.giai5').eq(1).text();
+   var number7=$('.giai4').eq(1).text();
+   var number8=$('.giai4').eq(2).text();
+   var number9=$('.giai4').eq(3).text();
+   var number10=$('.giai4').eq(4).text();
+   var number11=$('.giai4').eq(5).text();
+   var number12=$('.giai4').eq(6).text();
+   var number13=$('.giai4').eq(7).text();
+   var number14=$('.giai3').eq(1).text();
+   var number15=$('.giai3').eq(2).text();
+   var number16=$('.giai2').eq(1).text();
+   var number17=$('.giai1').eq(1).text();
+   var number18=$('.giaidb').eq(1).text();
    var number1b=$('.giai8').eq(2).text();
    var number2b=$('.giai7').eq(2).text();
    var number3b=$('.giai6').eq(4).text();
@@ -46,15 +64,16 @@ function parseHtml(result){
    var number17b=$('.giai1').eq(2).text();
    var number18b=$('.giaidb').eq(2).text();
    paramsb=[link,number1b,number2b,number3b,number4b,number5b,number6b,number7b,number8b,number9b,number10b,number11b,number12b,number13b,number14b,number15b,number16b,number17b,number18b];
-   var addSqlb='insert ignore into VietnamLottoTD(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+   var addSqlb='insert ignore into VietnamLottoFA(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
   connection.query(addSqlb,paramsb,function(err,resul){
       if(err){
-        console.log('[VietnamLottoTD insert error]-',err.message);
+        console.log('[VietnamLottoFA insert error]-',err.message);
       return;
       }
-    console.log('[VietnamLottoTD insert OK]');
+    console.log('[VietnamLottoFA insert OK]');
 });
 connection.end(); 
 };
 });};
-exports.VietnamLottoTD=VietnamLottoTD;
+exports.VietnamLottoFA=VietnamLottoFA;
+

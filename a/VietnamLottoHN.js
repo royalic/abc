@@ -59,9 +59,8 @@ function parseHtml(result){
    var number25=a5[5]+a5[6]+a5[7]+a5[8]+a5[9];
    var number26=$('.giai1').text();
    var number27=$('.giaidb').text();
-
-   params=[link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18];
-   var addSql='insert ignore into VietnamLottoHN(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'; 
+   var params=[link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21,number22,number23,number24,number25,number26,number27];
+   var addSql='insert ignore into VietnamLottoHN(link,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21,number22,number23,number24,number25,number26,number27) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'; 
   connection.query(addSql,params,function(err,resul){
       if(err){
         console.log('[VietnamLottoHN insert error]-',err.message);

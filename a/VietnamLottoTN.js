@@ -6,7 +6,7 @@ function VietnamLottoTN(){
 var rule=new schedule.RecurrenceRule();
 rule.dayOfWeek=[3];
 rule.hour=[17];
-rule.minute=[30];
+rule.minute=[30,40];
 var a=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
   host:'localhost',

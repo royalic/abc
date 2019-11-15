@@ -1,7 +1,13 @@
 var http = require('https');
 var cheerio = require('cheerio');
 var mysql=require('mysql');
-function fucai3D(){var connection=mysql.createConnection({
+var schedule=require('node-schedule');
+function fucai3D(){
+var rule3=new schedule.RecurrenceRule();
+rule3.hour=[21];
+rule3.minute=[15];
+var p=schedule.scheduleJob(rule3,function(){
+var connection=mysql.createConnection({
  host :'localhost',
  user:'root',
  password:'123456',
@@ -36,5 +42,5 @@ connection.query(addSql,addSqlParams,function(err,resul){
 }
 console.log('fucai3D insert OK');
 });
-});connection.end();};};
+});connection.end();};});};
 exports.fucai3D=fucai3D;

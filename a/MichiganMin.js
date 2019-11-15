@@ -1,4 +1,10 @@
 var mysql=require('mysql');
+var schedule=require('node-schedule');
+function MichiganMin(){
+var rule2=new schedule.RecurrenceRule();
+rule2.hour=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,18,19,20,21,22,23];
+rule2.second=[0,30];
+var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',
 user:'root',
@@ -14,4 +20,6 @@ connection.query('insert ignore into MichiganMin select link,mod(number1+number2
   console.log('MichiganMin insert OK');
 });
 connection.end();
+});};
+exports.MichiganMin=MichiganMin;
 

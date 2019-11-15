@@ -1,9 +1,9 @@
-var schedule=require('node-schedule');
 var mysql=require('mysql');
+var schedule=require('node-schedule');
 function MichiganLucky(){
 var rule2=new schedule.RecurrenceRule();
-rule2.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
-rule2.second=[1,5,10,15,20];
+rule2.hour=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,18,19,20,21,22,23];
+rule2.second=[0,30];
 var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',

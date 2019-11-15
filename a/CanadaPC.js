@@ -1,4 +1,9 @@
 var mysql=require('mysql');
+var schedule=require('node-schedule');
+function CanadaPC(){
+var rule2=new schedule.RecurrenceRule();
+rule2.second=[0,30];
+var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',
 user:'root',
@@ -14,3 +19,5 @@ connection.query('insert ignore into CanadaPC select link,mod(number1+number2+nu
   console.log('CanadaPC insert OK');
 });
 connection.end();
+});};
+exports.CanadaPC=CanadaPC;

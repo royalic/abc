@@ -4,6 +4,7 @@ var mysql=require('mysql');
 var schedule=require('node-schedule');
 function GreeceKeno(){
 var rule=new schedule.RecurrenceRule();
+rule.hour=[0,1,2,3,4,5,14,15,16,17,18,19,20,21,22,23];
 rule.minute=[5,10,15,20,25,30,35,40,45,50,55,0];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
@@ -29,7 +30,6 @@ request({
         var a=JSON.parse(result);
         var link=a.content[0];
         var lin=link.drawId;
-        console.log(link.drawId);
         var c=link.winningNumbers;
         var number1=c.list[0];
         var number2=c.list[1];

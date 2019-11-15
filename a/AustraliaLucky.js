@@ -2,8 +2,7 @@ var schedule=require('node-schedule');
 var mysql=require('mysql');
 function AustraliaLucky(){
 var rule2=new schedule.RecurrenceRule();
-rule2.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
-rule2.second=[1,5,10,15,20];
+rule2.second=[0,20,40];
 var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',

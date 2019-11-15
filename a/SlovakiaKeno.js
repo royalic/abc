@@ -4,7 +4,7 @@ var cheerio = require('cheerio');
 var mysql=require('mysql');
 function SlovakiaKeno(){
 var rule=new schedule.RecurrenceRule();
-rule.hour=[12,13,14,15,16,17,18,19,20,21,22,23,00,01,02,03,04,05,06];
+rule.hour=[0,1,2,3,4,5,6,11,12,13,14,15,16,17,18,19,20,21,22,23];
 rule.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({

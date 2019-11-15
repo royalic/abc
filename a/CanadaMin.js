@@ -1,4 +1,9 @@
 var mysql=require('mysql');
+var schedule=require('node-schedule');
+function CanadaMin(){
+var rule2=new schedule.RecurrenceRule();
+rule2.second=[0,30];
+var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',
 user:'root',
@@ -14,3 +19,6 @@ connection.query('insert ignore into CanadaMin select link,mod(number1+number2+n
   console.log('CanadaMin insert OK');
 });
 connection.end();
+});
+};
+exports.CanadaMin=CanadaMin;

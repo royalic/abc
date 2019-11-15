@@ -1,4 +1,10 @@
 var mysql=require('mysql');
+var schedule=require('node-schedule');
+function OreganMin(){
+var rule2=new schedule.RecurrenceRule();
+rule2.minute=[2,6,10,14,18,22,26,30,34,38,42,46,50,54,58];
+rule2.second=[1];
+var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',
 user:'root',
@@ -14,3 +20,5 @@ connection.query('insert ignore into OreganMin select link,mod(number1+number2+n
   console.log('OreganMin insert OK');
 });
 connection.end();
+});};
+exports.OreganMin=OreganMin;

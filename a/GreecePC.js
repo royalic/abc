@@ -2,8 +2,9 @@ var mysql=require('mysql');
 var schedule=require('node-schedule');
 function GreecePC(){
 var rule=new schedule.RecurrenceRule();
+rule.hour=[0,1,2,3,4,5,14,15,16,17,18,19,20,21,22,23];
 rule.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
-rule.second=[1,5,10,15,20];
+rule.second=[1];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
 host:'localhost',

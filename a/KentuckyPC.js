@@ -2,7 +2,9 @@ var mysql=require('mysql');
 var schedule=require('node-schedule');
 function KentuckyPC(){
 var rule=new schedule.RecurrenceRule();
-rule.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
+rule.hour=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,17,18,19,20,21,22,23];
+rule.minute=[1,5,9,13,17,21,25,29,33,37,41,45,49,53,57];
+rule.second=[1];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
 host:'localhost',

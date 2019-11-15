@@ -1,7 +1,13 @@
 var http = require('https');
 var cheerio = require('cheerio');
 var mysql=require('mysql');
-function beijingRace(){var connection=mysql.createConnection({
+var schedule=require('node-schedule');
+function beijingRace(){
+var rule=new schedule.RecurrenceRule();
+rule.hour=[9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+rule.minute=[10,30,50];
+var j=schedule.scheduleJob(rule,function(){
+var connection=mysql.createConnection({
  host :'localhost',
  user:'root',
  password:'123456',
@@ -43,6 +49,6 @@ connection.query(addSql,addSqlParams,function(err,resul){
 }
 console.log('beijingRace insert OK');
 });
-});connection.end();};
+});connection.end();};});
 };
 exports.beijingRace=beijingRace;

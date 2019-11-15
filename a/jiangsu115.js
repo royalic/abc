@@ -1,7 +1,13 @@
 var http = require('https');
 var cheerio = require('cheerio');
 var mysql=require('mysql');
-function jiangsu115(){var connection=mysql.createConnection({
+var schedule=require('node-schedule');
+function jiangsu115(){
+var rule2=new schedule.RecurrenceRule();
+rule2.hour=[8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+rule2.minute=[5,25,45];
+var p=schedule.scheduleJob(rule2,function(){
+var connection=mysql.createConnection({
  host :'localhost',
  user:'root',
  password:'123456',
@@ -38,6 +44,6 @@ connection.query(addSql,addSqlParams,function(err,resul){
 }
 console.log('jiangsu115 insert OK');
 });
-});connection.end();};
+});connection.end();};});
 };
 exports.jiangsu115=jiangsu115;

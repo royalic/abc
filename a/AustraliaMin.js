@@ -1,4 +1,9 @@
 var mysql=require('mysql');
+var schedule=require('node-schedule');
+function AustraliaMin(){
+var rule2=new schedule.RecurrenceRule();
+rule2.second=[0,20,40];
+var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',
 user:'root',
@@ -14,4 +19,5 @@ connection.query('insert ignore into AustraliaMin select link,mod(number1+number
   console.log('AustraliaMin insert OK');
 });
 connection.end();
-
+});};
+exports.AustraliaMin=AustraliaMin;

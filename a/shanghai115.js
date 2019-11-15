@@ -1,7 +1,13 @@
 var http = require('https');
 var cheerio = require('cheerio');
 var mysql=require('mysql');
-function shanghai115(){var connection=mysql.createConnection({
+var schedule=require('node-schedule');
+function shanghai115(){
+var rule2=new schedule.RecurrenceRule();
+rule2.hour=[0,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+rule2.minute=[00,20,40];
+var p=schedule.scheduleJob(rule2,function(){
+var connection=mysql.createConnection({
  host :'localhost',
  user:'root',
  password:'123456',
@@ -38,6 +44,6 @@ connection.query(addSql,addSqlParams,function(err,resul){
 }
 console.log('shanghai115 insert OK');
 });
-});connection.end();};
+});connection.end();};});
 };
 exports.shanghai115=shanghai115;

@@ -3,6 +3,7 @@ var request=require('request');
 var cheerio= require('cheerio');
 var mysql=require('mysql');
 function HongKonglottery(){var rule= new schedule.RecurrenceRule();
+rule.dayOfWeek=[2,4,6,7];
 rule.hour=21;
 rule.minute=36;
 var j=schedule.scheduleJob(rule,function(){

@@ -4,7 +4,7 @@ function VietnamPC(){
 var rule=new schedule.RecurrenceRule();
 rule.hour=[7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
 rule.minute=[10,20,30,40,50];
-rule.second=[1];
+rule.second=[58];
 var i=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
 host:'localhost',

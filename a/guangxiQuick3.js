@@ -6,6 +6,7 @@ function guangxiQuick3(){
 var rule2=new schedule.RecurrenceRule();
 rule2.hour=[9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
 rule2.minute=[10,30,50];
+rule2.second=[50];
 var i=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
  host :'localhost',

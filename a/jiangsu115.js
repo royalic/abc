@@ -6,6 +6,7 @@ function jiangsu115(){
 var rule2=new schedule.RecurrenceRule();
 rule2.hour=[8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
 rule2.minute=[5,25,45];
+rule2.second=[50];
 var p=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
  host :'localhost',

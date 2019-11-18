@@ -4,7 +4,7 @@ function KentuckyLucky(){
 var rule2=new schedule.RecurrenceRule();
 rule2.hour=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,17,18,19,20,21,22,23];
 rule2.minute=[1,5,9,13,17,21,25,29,33,37,41,45,49,53,57];
-rule2.second=[1];
+rule2.second=[58];
 var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',

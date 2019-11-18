@@ -6,6 +6,7 @@ function HongKonglottery(){var rule= new schedule.RecurrenceRule();
 rule.dayOfWeek=[2,4,6,7];
 rule.hour=21;
 rule.minute=36;
+rule.second=[50];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
  host :'localhost',

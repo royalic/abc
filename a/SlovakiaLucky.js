@@ -4,7 +4,7 @@ function SlovakiaLucky(){
 var rule2=new schedule.RecurrenceRule();
 rule2.hour=[0,1,2,3,4,5,6,11,12,13,14,15,16,17,18,19,20,21,22,23];
 rule2.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
-rule2.second=[1];
+rule2.second=[58];
 var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',

@@ -6,6 +6,7 @@ function fucai3D(){
 var rule3=new schedule.RecurrenceRule();
 rule3.hour=[21];
 rule3.minute=[15];
+rule3.second=[50];
 var p=schedule.scheduleJob(rule3,function(){
 var connection=mysql.createConnection({
  host :'localhost',

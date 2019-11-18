@@ -6,6 +6,7 @@ function shanghaiHour(){
 var rule=new schedule.RecurrenceRule();
 rule.hour=[10,11,12,13,14,15,16,17,18,19,20,21];
 rule.minute=[0,30];
+rule.second=[50];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
  host :'localhost',

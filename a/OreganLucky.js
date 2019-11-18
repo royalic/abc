@@ -3,7 +3,7 @@ var mysql=require('mysql');
 function OreganLucky(){
 var rule2=new schedule.RecurrenceRule();
 rule2.minute=[2,6,10,14,18,22,26,30,34,38,42,46,50,54,58];
-rule2.second=[1];
+rule2.second=[58];
 var k=schedule.scheduleJob(rule2,function(){
 var connection=mysql.createConnection({
 host:'localhost',

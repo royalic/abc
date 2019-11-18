@@ -6,6 +6,7 @@ function HongKongHorseRace(){
 var rule=new schedule.RecurrenceRule();
 rule.hour=[19,20,21,22];
 rule.minute=[15,45];
+rule.second=[50];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
  host :'localhost',

@@ -6,6 +6,7 @@ function chongqingHour(){
 var rule=new schedule.RecurrenceRule();
 rule.hour=[7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
 rule.minute=[10,30,50];
+rule.second=[50];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
  host :'localhost',

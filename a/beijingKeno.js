@@ -6,7 +6,7 @@ function beijingKeno(){
 var rule=new schedule.RecurrenceRule();
 rule.hour=[9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
 rule.minute=[0,5,10,15,20,25,30,35,40,45,50,55];
-rule.second=[1];
+rule.second=[50];
 var j=schedule.scheduleJob(rule,function(){
 var connection=mysql.createConnection({
  host :'localhost',
